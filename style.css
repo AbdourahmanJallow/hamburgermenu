@@ -1,0 +1,76 @@
+/* CSS Variables */
+:root {
+  --color-1: rgba(31, 2, 28, 0.315);
+  --color-2: rgba(4, 2, 31, 0.888);
+  --color-3: rgb(251, 54, 87);
+}
+
+/* Resetting Browser Default Padding & Margin */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+}
+
+/* Showcase > Container */
+#showcase .container {
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0 3rem;
+}
+#showcase {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--color-1);
+  height: 100vh;
+}
+#showcase:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url("./img/bg-3.jpg") no-repeat center center/cover;
+  z-index: -1;
+}
+#showcase .showcase-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #fff;
+}
+
+#showcase h1 {
+  font-size: 4rem;
+}
+#showcase p,
+.btn {
+  font-size: 1.2rem;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 2rem;
+  text-decoration: none;
+  /* text-transform: uppercase; */
+  background: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  color: var(--color-3);
+}
+.btn:hover {
+  opacity: 0.7;
+  transition: all 0.88s ease;
+}
